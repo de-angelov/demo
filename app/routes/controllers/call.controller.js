@@ -98,8 +98,6 @@ class CallController {
       .toString('base64');
   }
   async getUserData(accessToken, customerID) {
-    // const bankAuthCallString = this.USER_DATA_CALL + customerID + '/accounts';
-    // console.log('!! => bankAuthCallString', bankAuthCallString);
     const options = {
       url: this.USER_DATA_CALL + customerID + '/accounts',
       method: 'GET',
