@@ -1,0 +1,11 @@
+mixin choosebank()
+	.modal.fade(role="dialog" id="modal" tabindex="-1" aria-labelledby="modal").center-screen
+		.modal-dialog
+			.modal-content.container-fluid 
+					.modal-body
+						select.col-xs-8.col-xs-offset-2.text-center(id="select-bank")
+							each bank in bankList
+								option(data-id=bank.id)= bank.name
+					.modal-footer
+						.row
+						button.col-xs-2.col-xs-offset-5.text-center.btn.btn-danger(id="send" data-toggle="modal" data-target="#modal") connect

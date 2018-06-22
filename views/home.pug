@@ -1,0 +1,11 @@
+extends ./_shared/master
+include ./_shared/choosebank
+
+block metadata
+	meta(id="code" name="code", content=code)
+block content
+	script( src="/static/script/auth.js")
+	.container-fluid
+		+choosebank()
+		.row.center-screen
+			button.col-xs-4.text-center.btn.btn-default(type="button" data-toggle='modal' data-target='#modal') Connect To Bank
