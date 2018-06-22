@@ -5,7 +5,12 @@
     align-items: center;
     text-align: center;
     min-height: 100vh;
+   
   }
 #modal {
     height: 500px;
+}
+
+.large-text {
+    font-size: 250%;
 }
