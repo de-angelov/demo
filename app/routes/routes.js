@@ -35,11 +35,8 @@ const init = (app, config) => {
             });
         })
         .post('/id', async (req, res) => {
-            console.log('!! => id');
             const code = req.body.code;
             const customerID = req.body.customer_id;
-            console.log('!! => code', code);
-            console.log('!! => customerID', customerID);
             const clientToken = await controller.getClientToken();
             const accessToken = await controller.getAccessToken(clientToken, code);
             const userData = await controller.getUserData(accessToken, customerID);

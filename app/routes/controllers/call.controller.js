@@ -111,8 +111,16 @@ class CallController {
       return parsedBody.url;
     };
     const userData = await request(options, cb);
-    return userData;
+    console.log('!! => user data', userData);
+    return JSON.parse(userData);
   }
+
+  //  getBankInfo(userData, bankID) {
+  //    console.log(userData);
+  //    userData.data.forEach((x)=> {
+  //      console.log('!! =>' + x.attributes);
+  //    });
+  //  }
 }
 
 

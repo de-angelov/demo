@@ -16,6 +16,7 @@
                     console.log('code', code);
                     if (code) {
                         sessionStorage.setItem('code', code);
+                        sessionStorage.setItem('bankID', bankID);
                         $.ajax({
                             url: "http://127.0.0.1:4200/code",
                             type: "post",
